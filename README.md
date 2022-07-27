@@ -125,27 +125,9 @@ AirBnB 커버하기
 * MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/storming/bjjILDCdbDV6g79R6na93SWK29E3/e52b0637612b3f8e2c55366db1eacf6e
 
 
-### 이벤트 도출
-![image](https://user-images.githubusercontent.com/15603058/119298548-337fda80-bc98-11eb-9f96-7d583d156fb9.png)
-
-
-### 부적격 이벤트 탈락
-![image](https://user-images.githubusercontent.com/15603058/119298594-4f837c00-bc98-11eb-9f67-ec2e882e1f33.png)
-
-    - 과정중 도출된 잘못된 도메인 이벤트들을 걸러내는 작업을 수행함
-        - 등록시>RoomSearched, 예약시>RoomSelected :  UI 의 이벤트이지, 업무적인 의미의 이벤트가 아니라서 제외
-
-### 액터, 커맨드 부착하여 읽기 좋게
-![image](https://user-images.githubusercontent.com/15603058/119298993-113a8c80-bc99-11eb-9bae-4b911317d810.png)
-
-### 어그리게잇으로 묶기
-![image](https://user-images.githubusercontent.com/15603058/119299589-2663eb00-bc9a-11eb-83b9-de7f3efe7548.png)
-
-    - Room, Reservation, Payment, Review 은 그와 연결된 command 와 event 들에 의하여 트랜잭션이 유지되어야 하는 단위로 그들 끼리 묶어줌
-
 ### 바운디드 컨텍스트로 묶기
 
-![image](https://user-images.githubusercontent.com/15603058/119300858-6c21b300-bc9c-11eb-9b3f-c85aff51658f.png)
+![image](https://github.com/LeeJangHaeng/airbnb_project/blob/main/%EC%A0%84%EC%B2%B4%20%EA%B7%B8%EB%A6%BC-1.png)
 
     - 도메인 서열 분리 
         - Core Domain:  reservation, room : 없어서는 안될 핵심 서비스이며, 연간 Up-time SLA 수준을 99.999% 목표, 배포주기는 reservation 의 경우 1주일 1회 미만, room 의 경우 1개월 1회 미만
