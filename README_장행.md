@@ -121,8 +121,8 @@ AirBnB 커버하기
   ![image](https://user-images.githubusercontent.com/77129832/119315258-a09f6a00-bcb0-11eb-9940-c2a82f2f7d09.png)
 
 
-## Event Storming 결과
-* MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/storming/bjjILDCdbDV6g79R6na93SWK29E3/e52b0637612b3f8e2c55366db1eacf6e
+## 모델링 결과
+* MSAEz 로 모델링한 결과:  https://labs.msaez.io/#/storming/bjjILDCdbDV6g79R6na93SWK29E3/e52b0637612b3f8e2c55366db1eacf6e
 
 
 ### 완성된 모형
