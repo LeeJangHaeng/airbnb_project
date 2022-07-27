@@ -124,10 +124,6 @@ AirBnB 커버하기
 ## Event Storming 결과
 * MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/storming/bjjILDCdbDV6g79R6na93SWK29E3/e52b0637612b3f8e2c55366db1eacf6e
 
-    - 도메인 서열 분리 
-        - Core Domain:  reservation, room : 없어서는 안될 핵심 서비스이며, 연간 Up-time SLA 수준을 99.999% 목표, 배포주기는 reservation 의 경우 1주일 1회 미만, room 의 경우 1개월 1회 미만
-        - Supporting Domain:   message, viewpage : 경쟁력을 내기위한 서비스이며, SLA 수준은 연간 60% 이상 uptime 목표, 배포주기는 각 팀의 자율이나 표준 스프린트 주기가 1주일 이므로 1주일 1회 이상을 기준으로 함.
-        - General Domain:   payment : 결제서비스로 3rd Party 외부 서비스를 사용하는 것이 경쟁력이 높음 
 
 ### 완성된 모형
 
@@ -139,24 +135,24 @@ AirBnB 커버하기
         - General Domain:   payment : 결제서비스로 3rd Party 외부 서비스를 사용하는 것이 경쟁력이 높음 
 
 
-### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
+### 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
 
-![image](https://user-images.githubusercontent.com/15603058/119306321-f110ca80-bca4-11eb-804c-a965220bad61.png)
+![image](https://github.com/LeeJangHaeng/airbnb_project/blob/main/%EC%A0%84%EC%B2%B4%20%EA%B7%B8%EB%A6%BC-2.png)
 
-    - 호스트가 임대할 숙소를 등록/수정/삭제한다.(ok)
-    - 고객이 숙소를 선택하여 예약한다.(ok)
-    - 예약과 동시에 결제가 진행된다.(ok)
-    - 예약이 되면 예약 내역(Message)이 전달된다.(?)
-    - 고객이 예약을 취소할 수 있다.(ok)
-    - 예약 사항이 취소될 경우 취소 내역(Message)이 전달된다.(?)
-    - 숙소에 후기(review)를 남길 수 있다.(ok)
-    - 전체적인 숙소에 대한 정보 및 예약 상태 등을 한 화면에서 확인 할 수 있다.(View-green Sticker 추가로 ok)
-    
-### 모델 수정
+※ 완성된 모델은 모든 요구사항을 커버함.
+1. 호스트가 숙소 등록/수정/삭제한다.  (남색)
+2. 고객이 숙소 선택 및 예약한다.        (진한빨강)
+4. 호스트가 고객 예약을 accept 한다.   (녹색)
+5. 고객이 숙소 결제한다.                   (갈색)
+6. 결제가 되면 결제 내역(Message)이 전달된다. (갈색)
+7. 고객이 예약을 취소할 수 있다. (하늘)
+8. 호스트가 예약을 취소할 수 있다. (주황)
+9. 예약이 취소되면 취소 내역(Message)이 전달된다.
+10. 고객이 숙소 후기(review)를 남길 수 있다.   (회색)
+11. 호스트가 고객 후기(review)를 남길 수 있다.
+12. 숙소 정보/예약날짜/인원수/예약상태 등을 한 화면에서 확인할 수 있다.(viewpage)
 
-![image](https://user-images.githubusercontent.com/15603058/119307481-b740c380-bca6-11eb-9ee6-fda446e299bc.png)
-    
-    - 수정된 모델은 모든 요구사항을 커버함.
+
 
 ### 비기능 요구사항에 대한 검증
 
